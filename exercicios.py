@@ -118,21 +118,51 @@
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
-numeros = range(1, 11)
-pares = [x for x in numeros if x % 2 == 0]
+# numeros = range(1, 11)
+# pares = [x for x in numeros if x % 2 == 0]
 
-print(pares)
+# print(pares)
 
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+# vendas = [
+#     {"categoria": "eletrônicos", "valor": 1200},
+#     {"categoria": "livros", "valor": 200},
+#     {"categoria": "eletrônicos", "valor": 800}
+# ]
+
+# total_por_categoria = {}
+# for venda in vendas:
+#     categoria = venda["categoria"]
+#     valor = venda["valor"]
+#     if categoria in total_por_categoria:
+#         total_por_categoria[categoria] += valor
+#     else:
+#         total_por_categoria[categoria] = valor
+
+# print(total_por_categoria)
 
 ### Exercícios com WHILE
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
 
+# dados = []
+# entrada = ""
+# while entrada.lower() != "sair":
+#     entrada = input("Digite um valor (ou 'sair' para terminar): ")
+#     if entrada.lower() != "sair":
+
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+
+numero = int(input("Digite um número entre 1 e 10: "))
+while numero < 1 or numero > 10:
+    print("Número fora do intervalo!")
+    numero = int(input("Por favor, digite um número entre 1 e 10: "))
+
+print("Número válido!")
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
