@@ -20,14 +20,14 @@
 # Temperatura >= 18°C e <= 26°C é 'Normal'
 # Temperatura > 26°C é 'Alta'
 
-temperatura = 17  # Exemplo de valor
+# temperatura = 17  # Exemplo de valor
 
-if temperatura < 18:
-    print("Baixa")
-elif 18 <= temperatura <= 26:
-    print("Normal")
-else:
-    print("Alta")
+# if temperatura < 18:
+#     print("Baixa")
+# elif 18 <= temperatura <= 26:
+#     print("Normal")
+# else:
+#     print("Alta")
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
@@ -49,6 +49,25 @@ else:
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+texto = "hoje e nossa segunda aula do bootcamp de python. esse bootcamp é otimo"
+
+novo_texto = texto.replace(","," ")
+palavras = novo_texto.split(" ") # vai retornar uma lista de palavras separadas pelo delimitador 
+
+print(palavras)
+
+contagem_palavras = {}
+# percorrer todas as palavras dentro de palavras e checa se ja esta na contagem de palavras
+
+for palavra in palavras:
+    if palavra in contagem_palavras:
+        contagem_palavras[palavra] += 1
+    else:
+        contagem_palavras[palavra] = 1
+
+print(contagem_palavras)
+
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
