@@ -35,11 +35,21 @@
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
+log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+
+if log['level'] == 'ERROR':
+    print(log['message'])
+
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+
+# idade = input("Digite sua idade: ")
+
+# if idade <18 or idade > 65:
+#     print("e")
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
@@ -50,23 +60,23 @@
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
-texto = "hoje e nossa segunda aula do bootcamp de python. esse bootcamp é otimo"
+# texto = "hoje e nossa segunda aula do bootcamp de python. esse bootcamp é otimo"
 
-novo_texto = texto.replace(","," ")
-palavras = novo_texto.split(" ") # vai retornar uma lista de palavras separadas pelo delimitador 
+# novo_texto = texto.replace(","," ")
+# palavras = novo_texto.split(" ") # vai retornar uma lista de palavras separadas pelo delimitador 
 
-print(palavras)
+# print(palavras)
 
-contagem_palavras = {}
-# percorrer todas as palavras dentro de palavras e checa se ja esta na contagem de palavras
+# contagem_palavras = {}
+# # percorrer todas as palavras dentro de palavras e checa se ja esta na contagem de palavras
 
-for palavra in palavras:
-    if palavra in contagem_palavras:
-        contagem_palavras[palavra] += 1
-    else:
-        contagem_palavras[palavra] = 1
+# for palavra in palavras:
+#     if palavra in contagem_palavras:
+#         contagem_palavras[palavra] += 1
+#     else:
+#         contagem_palavras[palavra] = 1
 
-print(contagem_palavras)
+# print(contagem_palavras)
 
 
 ### Exercício 7. Normalização de Dados
